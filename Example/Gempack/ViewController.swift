@@ -7,18 +7,15 @@
 //
 
 import UIKit
+import Gempack
 
 class ViewController: UIViewController {
 
+    #warning("Don't forget to clean here")
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
 
