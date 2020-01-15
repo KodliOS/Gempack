@@ -10,6 +10,8 @@
 		00224C929D57F45B70E87359E719948D /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E29C50D3CDB46CBCBD20AFA13EB3D8D /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F5712003B8BE12A53AC5DCFD28A8352 /* Pods-Gempack_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B5AE45CBFF40F95FC6978A018287C31 /* Pods-Gempack_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11C410135C7E89353B480AC8DE0BFB77 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1FE5C23F1BC485C54B92C32E78391F /* UIApplication+StrictKeyWindow.m */; };
+		12EE1B8E23CF9F58007ED8AF /* UIImage+render.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EE1B8D23CF9F58007ED8AF /* UIImage+render.swift */; };
+		12EE1B8F23CF9F58007ED8AF /* UIImage+render.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EE1B8D23CF9F58007ED8AF /* UIImage+render.swift */; };
 		14AD81D52FAD9CF2C065C61FB00C3B4F /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = E0956940883830C651240E754E3ECC52 /* UIImage+Diff.m */; };
 		14C511527597E5846AB2627F791C7D8E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 716A9972B9D9103B54DB950893FAF104 /* QuartzCore.framework */; };
 		2B77CEDF9E198C831F653DC70A536971 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
@@ -69,6 +71,7 @@
 		032C94B592C6C06B976613C232ED4C07 /* Gempack-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gempack-umbrella.h"; sourceTree = "<group>"; };
 		04131D3BC653E02F048E1A87517B6D8B /* Pods-Gempack_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Gempack_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0A3ACA72AE9B776E644F6D159AB3E80B /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
+		12EE1B8D23CF9F58007ED8AF /* UIImage+render.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+render.swift"; sourceTree = "<group>"; };
 		13C8BBFE2D9E3A9C566221B1DE04E91C /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		15C55565BE98A11F035176CB324D7FF0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1B8ABEEA76ECDF1975B6D0787700F929 /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
@@ -171,6 +174,14 @@
 				7A7C0B257371D1307060634225813622 /* Gempack */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		12EE1B8C23CF9F14007ED8AF /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				12EE1B8D23CF9F58007ED8AF /* UIImage+render.swift */,
+			);
+			path = UIImage;
 			sourceTree = "<group>";
 		};
 		2CC2387C24CA3AB4030A7AD11CE273FE /* Targets Support Files */ = {
@@ -327,6 +338,7 @@
 		C208D83D23CF9701003DA70B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				12EE1B8C23CF9F14007ED8AF /* UIImage */,
 				C208D83C23CF96FD003DA70B /* UIView */,
 			);
 			path = Extensions;
@@ -508,6 +520,9 @@
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				TargetAttributes = {
+					98A98149697C80CEF8D5772791E92E66 = {
+						LastSwiftMigration = 1130;
+					};
 					FCD5DB2D6A022F9FAB7C199168BD68C9 = {
 						LastSwiftMigration = 1130;
 					};
@@ -588,6 +603,7 @@
 				2DCFF0CE0BD295F1D46D3247F36B192C /* UIImage+Compare.m in Sources */,
 				14AD81D52FAD9CF2C065C61FB00C3B4F /* UIImage+Diff.m in Sources */,
 				A525E29E0A8079B35B793D8A2B5FBDF2 /* UIImage+Snapshot.m in Sources */,
+				12EE1B8E23CF9F58007ED8AF /* UIImage+render.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +621,7 @@
 			files = (
 				C208D84023CF9710003DA70B /* UIView+addSubviews.swift in Sources */,
 				B5E6D7A41353B072F2D555404C8BC8D9 /* Gempack-dummy.m in Sources */,
+				12EE1B8F23CF9F58007ED8AF /* UIImage+render.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,7 +674,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -756,7 +773,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -946,7 +963,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -977,7 +994,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
