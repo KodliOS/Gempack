@@ -1,0 +1,6 @@
+framework module Gempack {
+  umbrella header "Gempack-umbrella.h"
+
+  export *
+  module * { export * }
+}
