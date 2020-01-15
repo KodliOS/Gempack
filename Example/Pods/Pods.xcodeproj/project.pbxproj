@@ -29,8 +29,8 @@
 		B25D795BDC4F426BC01EFC911F368B81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
 		B5E6D7A41353B072F2D555404C8BC8D9 /* Gempack-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D02E82EF540FE581BC4D98F3CC85CA1 /* Gempack-dummy.m */; };
 		B74CD6E6EBEA0B642776BCB37850415D /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = EA718A72E676291836EBB46B85242155 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C208D80323CF910E003DA70B /* UIView+subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C208D80223CF910E003DA70B /* UIView+subviews.swift */; };
-		C208D80423CF9216003DA70B /* UIView+subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C208D80223CF910E003DA70B /* UIView+subviews.swift */; };
+		C208D83F23CF9710003DA70B /* UIView+addSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C208D83E23CF9710003DA70B /* UIView+addSubviews.swift */; };
+		C208D84023CF9710003DA70B /* UIView+addSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C208D83E23CF9710003DA70B /* UIView+addSubviews.swift */; };
 		C49D52712466511E332C952834C81FE1 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D3067EAFD5B0A06885968D137840DB70 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D04AAC8B22E4A4DC4F39891C4E52F251 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = E354F8FD537351F26F7949B4EBFA5101 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E0B8D095C732352C854D365B9E5B993D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAA89EEF1039078430D7A886477E365 /* UIKit.framework */; };
@@ -109,7 +109,7 @@
 		AD0B81AC7DF4855803A0FA70985F8A99 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		AEFE8A5296B154A7D56F0B6BD863A97D /* Pods-Gempack_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Gempack_Tests.modulemap"; sourceTree = "<group>"; };
 		BFD18A9B7DDA409D452F584DBD6C13ED /* Pods-Gempack_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Gempack_Example-umbrella.h"; sourceTree = "<group>"; };
-		C208D80223CF910E003DA70B /* UIView+subviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+subviews.swift"; sourceTree = "<group>"; };
+		C208D83E23CF9710003DA70B /* UIView+addSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addSubviews.swift"; sourceTree = "<group>"; };
 		CF776D63636E4CDDE053CD8AC6F5FD24 /* Pods-Gempack_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gempack_Example-dummy.m"; sourceTree = "<group>"; };
 		D2663744D007227F6AC4A8745FB5AEE8 /* Pods-Gempack_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Gempack_Example.modulemap"; sourceTree = "<group>"; };
 		D3067EAFD5B0A06885968D137840DB70 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
@@ -241,7 +241,7 @@
 		7A7C0B257371D1307060634225813622 /* Gempack */ = {
 			isa = PBXGroup;
 			children = (
-				C208D80023CF90E1003DA70B /* UIView */,
+				C208D83B23CF96FA003DA70B /* Classes */,
 				FCD83D1871036A0BC0517C3894ED73BD /* Pod */,
 				71082A4C06941E77A4A07F16532C015B /* Support Files */,
 			);
@@ -307,20 +307,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C208D80023CF90E1003DA70B /* UIView */ = {
+		C208D83B23CF96FA003DA70B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C208D80123CF90EC003DA70B /* Subview */,
+				C208D83D23CF9701003DA70B /* Extensions */,
+			);
+			name = Classes;
+			path = Gempack/Classes;
+			sourceTree = "<group>";
+		};
+		C208D83C23CF96FD003DA70B /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				C208D83E23CF9710003DA70B /* UIView+addSubviews.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
 		};
-		C208D80123CF90EC003DA70B /* Subview */ = {
+		C208D83D23CF9701003DA70B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C208D80223CF910E003DA70B /* UIView+subviews.swift */,
+				C208D83C23CF96FD003DA70B /* UIView */,
 			);
-			path = Subview;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C927A5D0C29420D5F966C5EEE3063CDA /* Pods-Gempack_Example */ = {
@@ -498,6 +507,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					FCD5DB2D6A022F9FAB7C199168BD68C9 = {
+						LastSwiftMigration = 1130;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -564,6 +578,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C208D83F23CF9710003DA70B /* UIView+addSubviews.swift in Sources */,
 				6DBC8EB7532E931C2FBDA71D1E0B66A4 /* FBSnapshotTestCase-dummy.m in Sources */,
 				8CE3BF0ACE07EA42DD5DAC871BF4B767 /* FBSnapshotTestCase.m in Sources */,
 				E8AC509D18EBF21B1FEA909652A01108 /* FBSnapshotTestCasePlatform.m in Sources */,
@@ -572,7 +587,6 @@
 				11C410135C7E89353B480AC8DE0BFB77 /* UIApplication+StrictKeyWindow.m in Sources */,
 				2DCFF0CE0BD295F1D46D3247F36B192C /* UIImage+Compare.m in Sources */,
 				14AD81D52FAD9CF2C065C61FB00C3B4F /* UIImage+Diff.m in Sources */,
-				C208D80323CF910E003DA70B /* UIView+subviews.swift in Sources */,
 				A525E29E0A8079B35B793D8A2B5FBDF2 /* UIImage+Snapshot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,7 +603,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C208D80423CF9216003DA70B /* UIView+subviews.swift in Sources */,
+				C208D84023CF9710003DA70B /* UIView+addSubviews.swift in Sources */,
 				B5E6D7A41353B072F2D555404C8BC8D9 /* Gempack-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -622,6 +636,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E54D5785F03EDDE993416D8C56D13352 /* Gempack.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -909,6 +924,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E54D5785F03EDDE993416D8C56D13352 /* Gempack.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -929,6 +945,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
